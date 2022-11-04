@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+/visualstudiocode/.vs/visualstudiocode
+/visualstudiocode/x64/Debug
+/visualstudiocode/visualstudiocode.vcxproj.user
+/visualstudiocode/visualstudiocode.vcxproj.filters
+/visualstudiocode/visualstudiocode.vcxproj
+/visualstudiocode/visualstudiocode.sln
