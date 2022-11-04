@@ -1,6 +1,5 @@
 #include <iostream>
 #include "library.h"
-#include "io.h"
 
 int main()
 {
