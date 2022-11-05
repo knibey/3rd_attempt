@@ -1,10 +1,38 @@
 #include <iostream>
 #include "library.h"
 
+bool isPrime(int x) {
+    if ( x == 2 ) {
+        return 1;
+    }
+
+    if ( x < 2 ) {
+        return 0;
+    }
+
+    for (int i = 2; i * i <= x; i++) {
+        if ( x % i == 0 ) {
+            return 0;
+        }
+    }
+
+    return 1;
+}
+
 int main()
 {
+    int value = getValueFromUser();
+
+    bool prime = isPrime(value);
     
-    int a = getValueFromUser();
+    if (prime) {
+        std::cout << "its prime" << std::endl;
+    } else {
+        std::cout << "its not prime" << std::endl;
+    }
+    
+    
+    /*int a = getValueFromUser();
     int b = getValueFromUser();
 
     int ahsala{5036};
@@ -19,7 +47,7 @@ int main()
 
     std::cout << ahsala << std::endl;
 
-    /*std::cout << "Enter your first number: " << std::endl;
+    std::cout << "Enter your first number: " << std::endl;
     int uservalue1 = readNumber();
     std::cout << "Enter your second number: " << std::endl;
     int uservalue2 = readNumber();
