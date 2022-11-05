@@ -3,10 +3,14 @@
 
 int doubleNumber(int a);
 
-int getValueFromUser();
+double getIntFromUser();
+
+double getDoubleFromUser();
+
+char getCharFromUser();
 
 int sum(int* dodanok1, int* dodanok2);
 
-bool isPrime(int x)
+bool isPrime(int x);
 
 #endif // !LIBRARY_H

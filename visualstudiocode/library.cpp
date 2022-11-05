@@ -4,8 +4,24 @@ int doubleNumber(int a) {
     return a * 2;
 }
 
-int getValueFromUser() {
+int getIntFromUser() {
     int x;
+
+    std::cin >> x;
+
+    return x;
+}
+
+double getDoubleFromUser() {
+    double x;
+
+    std::cin >> x;
+
+    return x;
+}
+
+char getCharFromUser() {
+    char x;
 
     std::cin >> x;
 
