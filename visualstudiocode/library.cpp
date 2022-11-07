@@ -49,3 +49,7 @@ bool isPrime(int x) {
 
     return 1;
 }
+
+bool isEven(int value) {
+    return value % 2 == 0;
+}

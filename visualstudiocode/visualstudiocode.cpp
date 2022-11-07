@@ -2,8 +2,49 @@
 #include "library.h"
 #include "constants.h"
 
+int convert(int x, int pow) {
+    if (x >= pow) {
+        std::cout << '1';
+    } else {
+        std::cout << '0';
+    }
+
+    if (x >= pow) {
+        return x - pow;
+    } else {
+        return x;
+    }
+}
+
+
 int main() {
 
+    std::cout << "Enter your number between 0 and 255: ";
+    int x = getIntFromUser();
+
+    x = convert(x, 128);
+    x = convert(x, 64);
+    x = convert(x, 32);
+    x = convert(x, 16);
+
+    std::cout << " ";
+
+    x = convert(x, 8);
+    x = convert(x, 4);
+    x = convert(x, 2);
+    x = convert(x, 1);
+    
+    
+    /*int a = getIntFromUser();
+    std::cout << std::boolalpha;
+    std::cout << isEven(a);
+    int x = 101;
+    if ( x > 100 ) {
+        std::cout << "bilshe" << std::endl;
+    } else {
+        std::cout << "menshe" << std::endl;
+    }
+    
     std::cout << "Enter the initial height of the tower in meters: ";
     double height = getDoubleFromUser();
     
@@ -18,10 +59,7 @@ int main() {
         std::cout << "At " << i << " seconds, the ball is at height: " << height - ball_height << " meters" << std::endl;
     }
 
-
-
-
-    /*std::cout << "Enter a double value: ";
+    std::cout << "Enter a double value: ";
     double value1 = getDoubleFromUser();
 
     std::cout << "Enter a double value: ";
