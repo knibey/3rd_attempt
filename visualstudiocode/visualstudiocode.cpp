@@ -3,9 +3,64 @@
 #include "constants.h"
 #include <string>
 
+struct Advertising {
+    int ads;
+    double percent;
+    double income;
+};
+
+struct Drobi {
+    int chiselnik;
+    int znamennik;
+};
+
+float multiply(Drobi firstd, Drobi secondd) {
+    return ((firstd.chiselnik * secondd.chiselnik) / (firstd.znamennik*secondd.znamennik));
+}
+
 int main() {
 
-    std::cout << "Enter your full name: ";
+    Drobi firstd;
+    Drobi secondd;
+
+    firstd.chiselnik = getIntFromUser();
+    firstd.znamennik = getIntFromUser();
+
+    secondd.chiselnik = getIntFromUser();
+    secondd.znamennik = getIntFromUser();
+
+    std::cout << multiply(firstd, secondd);
+
+
+
+
+    /*Advertising alltimeincome;
+
+    alltimeincome.ads = getIntFromUser();
+    alltimeincome.percent = getDoubleFromUser();
+    alltimeincome.income = getDoubleFromUser();
+
+    //std::cout << alltimeincome.ads << std::endl;
+    //std::cout << alltimeincome.percent << std::endl;
+    //std::cout << alltimeincome.income << std::endl;
+
+    std::cout << alltimeincome.ads * (alltimeincome.percent / 100) * alltimeincome.income;
+
+    /*enum Race {
+        RACE_OGRE,
+        RACE_GOBLIN,
+        RACE_SKELETON,
+        RACE_ORC,
+        RACE_TROLL
+    };
+    
+    Race monstertype = RACE_OGRE;
+
+    //typedef int status_t;
+    using status_t = int;
+    status_t editData();
+
+    /*std::cout << "Enter your full name: ";
     std::string name;
     std::getline(std::cin, name);
 
