@@ -1,25 +1,45 @@
 #include <iostream>
 #include "library.h"
 #include "constants.h"
-
-int convert(int x, int pow) {
-    if (x >= pow) {
-        std::cout << '1';
-    } else {
-        std::cout << '0';
-    }
-
-    if (x >= pow) {
-        return x - pow;
-    } else {
-        return x;
-    }
-}
-
+#include <string>
 
 int main() {
 
-    std::cout << "Enter your number between 0 and 255: ";
+    std::cout << "Enter your full name: ";
+    std::string name;
+    std::getline(std::cin, name);
+
+    std::cout << "Enter your age: ";
+    int age = getIntFromUser();
+
+    double lived = (static_cast<double>(age)) / name.length();
+
+    std::cout << "You've lived " << lived << " years for each letter in your name" << std::endl;
+
+
+
+
+
+    /*std::cout << "Enter number: ";
+    int a = getIntFromUser();
+
+    std::cout << "Enter bigger number: ";
+    int b = getIntFromUser();
+
+    if (a > b) {
+        std::cout << "Switching numbers" << std::endl;
+        int temp;
+
+        temp = b;
+        b = a;
+        a = temp;
+    }
+
+    std::cout << "Min number: " << a << std::endl;
+    std::cout << "Max number: " << b << std::endl;
+    
+    
+    /*std::cout << "Enter your number between 0 and 255: ";
     int x = getIntFromUser();
 
     x = convert(x, 128);

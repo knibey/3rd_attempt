@@ -15,4 +15,6 @@ bool isPrime(int x);
 
 bool isEven(int value);
 
+int convert(int x, int pow);
+
 #endif // !LIBRARY_H

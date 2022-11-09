@@ -53,3 +53,19 @@ bool isPrime(int x) {
 bool isEven(int value) {
     return value % 2 == 0;
 }
+
+int convert(int x, int pow) {
+    if (x >= pow) {
+        std::cout << '1';
+    }
+    else {
+        std::cout << '0';
+    }
+
+    if (x >= pow) {
+        return x - pow;
+    }
+    else {
+        return x;
+    }
+}
