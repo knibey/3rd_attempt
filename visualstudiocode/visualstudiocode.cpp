@@ -55,7 +55,7 @@ void printMonster(Monster monster) {
     std::cout << "This " << getMonsterType(monster) << " is named " << monster.name << " and has " << monster.hp << " health." << std::endl;
 }*/
 
-int calcute(int a, int b, char op) {
+/*int calcute(int a, int b, char op) {
     switch (op) {
         case '+':
             return a + b;
@@ -70,11 +70,106 @@ int calcute(int a, int b, char op) {
         default:
             return 0;
     }
+}*/
+
+enum class Animal {
+    PIG,
+    CHICKEN,
+    GOAT,
+    CAT,
+    DOG,
+    OSTRICH
+};
+
+std::string getAnimalName(Animal animal) {
+    switch (animal) {
+        case Animal::PIG:
+            return "Pig";
+        case Animal::CHICKEN:
+            return "Chicken";
+        case Animal::GOAT:
+            return "Goat";
+        case Animal::CAT:
+            return "Cat";
+        case Animal::DOG:
+            return "Dog";
+        case Animal::OSTRICH:
+            return "Ostrich";
+        default:
+            return "ERROR_UNKNOWN_ANIMAL";
+    }
+}
+
+int printNumberOfLegs(Animal animal) {
+    switch (animal) {
+    case Animal::PIG:
+        return 4;
+    case Animal::CHICKEN:
+        return 2;
+    case Animal::GOAT:
+        return 4;
+    case Animal::CAT:
+        return 4;
+    case Animal::DOG:
+        return 4;
+    case Animal::OSTRICH:
+        return 2;
+    default:
+        return 0;
+    }
+}
+
+int sumTo(int value) {
+    int result = 0;
+    for (int i = 0; i <= value; i++) {
+        result += i;
+    }
+    return result;
 }
 
 int main() {
 
-    std::cout << "Enter first number: ";
+    std::cout << "This is sumTo() function - " << sumTo(5) << std::endl;
+    
+
+    std::cout << "This is FOR loop: " << std::endl;
+    for (int i = 0; i <= 20; i += 2) {
+        std::cout << i << std::endl;
+    }
+    
+    /*int outer = 1;
+    while (outer <= 5) {
+
+        int inner = 5;
+        while (inner >= 1) {
+            if (inner <= outer) {
+                std::cout << inner << " ";
+            } else {
+                std::cout << "  ";
+            }
+
+            --inner;
+        }
+
+        std::cout << "\n";
+        ++outer;
+    }
+    
+    /*char alphabet = 'a';
+
+    while (alphabet <= 'z') {
+        std::cout << alphabet << " - " << static_cast<int>(alphabet) << std::endl;
+
+        ++alphabet;
+    }
+
+    /*Animal cat = Animal::CAT;
+    Animal chicken = Animal::CHICKEN;
+
+    std::cout << "A " << getAnimalName(cat) << " has " << printNumberOfLegs(cat) << " legs" << std::endl;
+    std::cout << "A " << getAnimalName(chicken) << " has " << printNumberOfLegs(chicken) << " legs" << std::endl;
+
+    /*std::cout << "Enter first number: ";
     int a = getIntFromUser();
 
     std::cout << "Enter second number: ";
