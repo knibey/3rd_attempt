@@ -3,7 +3,7 @@
 #include "constants.h"
 #include <string>
 
-enum class MonsterType {
+/*enum class MonsterType {
     OGRE,
     GOLBIN,
     SKELETON,
@@ -11,7 +11,7 @@ enum class MonsterType {
     TROLL
 };
 
-/*struct Advertising {
+struct Advertising {
     int ads;
     double percent;
     double income;
@@ -27,7 +27,7 @@ float multiply(Drobi firstd, Drobi secondd) {
 }
 */
 
-struct Monster {
+/*struct Monster {
     MonsterType type;
     std::string name;
     int hp;
@@ -53,11 +53,50 @@ std::string getMonsterType(Monster monster) {
 
 void printMonster(Monster monster) {
     std::cout << "This " << getMonsterType(monster) << " is named " << monster.name << " and has " << monster.hp << " health." << std::endl;
+}*/
+
+int calcute(int a, int b, char op) {
+    switch (op) {
+        case '+':
+            return a + b;
+        case '-':
+            return a - b;
+        case '*':
+            return a * b;
+        case '/':
+            return a / b;
+        case '%':
+            return a % b;
+        default:
+            return 0;
+    }
 }
 
 int main() {
 
-    Monster john = { MonsterType::GOLBIN, "John", 170 };
+    std::cout << "Enter first number: ";
+    int a = getIntFromUser();
+
+    std::cout << "Enter second number: ";
+    int b = getIntFromUser();
+
+    std::cout << "Enter operator: ";
+    char op = getCharFromUser();
+
+    for (; ;) {
+        if ((op != '-') && (op != '+') && (op != '*') && (op != '/') && (op != '%')) {
+            std::cout << "ERROR_BAD_OPERATOR" << std::endl;
+            std::cout << "Enter valid operator: ";
+            op = getCharFromUser();
+        } else {
+            break;
+        }
+    }
+
+    std::cout << "Your result is: " << a << ' ' << op << ' ' << b << " = " << calcute(a, b, op) << std::endl;
+    
+    
+    /*Monster john = {MonsterType::GOLBIN, "John", 170};
     Monster james = { MonsterType::ORC, "James", 35 };
 
     printMonster(john);
