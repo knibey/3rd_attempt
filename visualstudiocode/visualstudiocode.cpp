@@ -3,7 +3,15 @@
 #include "constants.h"
 #include <string>
 
-struct Advertising {
+enum class MonsterType {
+    OGRE,
+    GOLBIN,
+    SKELETON,
+    ORC,
+    TROLL
+};
+
+/*struct Advertising {
     int ads;
     double percent;
     double income;
@@ -17,10 +25,47 @@ struct Drobi {
 float multiply(Drobi firstd, Drobi secondd) {
     return ((firstd.chiselnik * secondd.chiselnik) / (firstd.znamennik*secondd.znamennik));
 }
+*/
+
+struct Monster {
+    MonsterType type;
+    std::string name;
+    int hp;
+};
+
+std::string getMonsterType(Monster monster) {
+    switch (monster.type)
+    {
+    case MonsterType::OGRE:
+        return "Ogre";
+    case MonsterType::GOLBIN:
+        return "Goblin";
+    case MonsterType::SKELETON:
+        return "Skeleton";
+    case MonsterType::ORC:
+        return "Orc";
+    case MonsterType::TROLL:
+        return "Troll";
+    default:
+        return "Unknown";
+    }
+}
+
+void printMonster(Monster monster) {
+    std::cout << "This " << getMonsterType(monster) << " is named " << monster.name << " and has " << monster.hp << " health." << std::endl;
+}
 
 int main() {
 
-    Drobi firstd;
+    Monster john = { MonsterType::GOLBIN, "John", 170 };
+    Monster james = { MonsterType::ORC, "James", 35 };
+
+    printMonster(john);
+    printMonster(james);
+    
+    
+    
+    /*Drobi firstd;
     Drobi secondd;
 
     firstd.chiselnik = getIntFromUser();
