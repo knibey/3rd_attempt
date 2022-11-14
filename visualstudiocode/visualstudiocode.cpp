@@ -127,7 +127,7 @@ int sumTo(int value) {
     return result;
 }
 
-int main() {
+/*int main() {
 
     std::cout << "This is sumTo() function - " << sumTo(5) << std::endl;
     
@@ -373,7 +373,8 @@ int main() {
     std::cout << "Enter your second number: " << std::endl;
     int uservalue2 = readNumber();
     
-    std::cout << "Here is your result: " << writeAnswer(uservalue1, uservalue2) << std::endl;*/
+    std::cout << "Here is your result: " << writeAnswer(uservalue1, uservalue2) << std::endl;
 
     return 0;
 }
+*/
