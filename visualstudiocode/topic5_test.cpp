@@ -40,7 +40,7 @@ bool playAgain() {
     return (answer == 'y');
 }
 
-int main() {
+int main_topic5() {
     srand(static_cast<unsigned int>(time(0)));
     rand();
 
