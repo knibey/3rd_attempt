@@ -17,7 +17,7 @@ namespace Animals {
     };
 }
 
-int main() {
+int main1() {
     double temp[365] = {0.0};
 
     int numbalegs[Animals::MAX_ANIMALS] = {2,4,4,4,2,0};
