@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <ctime>
 
-int main() {
+int main12() {
     const int length = 9;
     int array[length] = {7,5,6,4,9,8,2,1,3};
 

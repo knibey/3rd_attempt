@@ -28,6 +28,14 @@ char getCharFromUser() {
     return x;
 }
 
+std::string getStringFromUser() {
+    std::string x;
+
+    std::cin >> x;
+
+    return x;
+}
+
 int sum(int* dodanok1, int* dodanok2) {
     return *dodanok1 + *dodanok2;
 }
@@ -67,5 +75,15 @@ int convert(int x, int pow) {
     }
     else {
         return x;
+    }
+}
+
+void stringSort(std::string *array, int length) {
+    for (int iteration = 0; iteration < length - 1; ++iteration) {
+        for (int currentIndex = 0; currentIndex < length - 1; ++currentIndex) {
+            if (array[currentIndex] > array[currentIndex + 1]) {
+                std::swap(array[currentIndex], array[currentIndex + 1]);
+            }
+        }
     }
 }
