@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <ctime>
 
-int main() {
+int main445() {
 
     std::cout << "How many names u wanna type in?: ";
     int length = getIntFromUser();
