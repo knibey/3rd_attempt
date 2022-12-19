@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <ctime>
 
-int main() {
+int main11() {
     std::string names[8] = {"Sasha","Ivan","John","Orlando","Leonardo","Nina","Anton","Molly"};
 
     std::string user_name = getStringFromUser();
