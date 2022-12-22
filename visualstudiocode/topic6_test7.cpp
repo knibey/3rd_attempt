@@ -158,7 +158,7 @@ bool playBlackJack(const std::array<Card, 52> &deck) {
 
 }
 
-int main() {
+int maintopic6_test7() {
     srand(static_cast<unsigned int>(time(0)));
     rand();
 
