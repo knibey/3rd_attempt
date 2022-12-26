@@ -1,9 +1,9 @@
-#include <iostream>
+/*#include <iostream>
 #include "library.h"
 #include "constants.h"
 #include <string>
 
-/*enum class MonsterType {
+enum class MonsterType {
     OGRE,
     GOLBIN,
     SKELETON,
@@ -25,9 +25,9 @@ struct Drobi {
 float multiply(Drobi firstd, Drobi secondd) {
     return ((firstd.chiselnik * secondd.chiselnik) / (firstd.znamennik*secondd.znamennik));
 }
-*/
 
-/*struct Monster {
+
+struct Monster {
     MonsterType type;
     std::string name;
     int hp;
@@ -53,9 +53,9 @@ std::string getMonsterType(Monster monster) {
 
 void printMonster(Monster monster) {
     std::cout << "This " << getMonsterType(monster) << " is named " << monster.name << " and has " << monster.hp << " health." << std::endl;
-}*/
+}
 
-/*int calcute(int a, int b, char op) {
+int calcute(int a, int b, char op) {
     switch (op) {
         case '+':
             return a + b;
@@ -70,7 +70,7 @@ void printMonster(Monster monster) {
         default:
             return 0;
     }
-}*/
+}
 
 enum class Animal {
     PIG,
@@ -127,7 +127,7 @@ int sumTo(int value) {
     return result;
 }
 
-/*int main() {
+int main() {
 
     std::cout << "This is sumTo() function - " << sumTo(5) << std::endl;
     
