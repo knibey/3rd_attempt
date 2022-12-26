@@ -6,6 +6,8 @@
 #include <cstring>
 #include <array>
 
+struct Animal {};
+
 int sumTo(const int max);
 
 void printAnimalName(const Animal &animal);
