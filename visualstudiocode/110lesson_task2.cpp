@@ -45,7 +45,7 @@ arithmeticFcn getArithmeticFcn(char op) {
     return add;
 }
 
-int main() {
+int mainlesson110_task2() {
 
     int x, y;
     char op;
