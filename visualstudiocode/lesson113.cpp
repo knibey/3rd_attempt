@@ -30,7 +30,7 @@ void binarReverse(unsigned int number) {
     std::cout << number % 2;
 }
 
-int main() {
+int mainlesson113() {
 
     int number = getIntFromUser();
 
