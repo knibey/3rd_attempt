@@ -5,10 +5,11 @@
 #include <utility>
 #include <cstring>
 #include <array>
+#include <algorithm>
 
 struct Student {
-    std::string name;
-    int grade;
+    std::string name{};
+    int grade{};
 };
 
 int mainlesson118_task1() {
@@ -23,11 +24,9 @@ int mainlesson118_task1() {
         {"Hagrid", 5} }
     };
 
-    //auto best{
-    //    std::max_element(arr.begin(), arr.end(), [](const auto& student1, const auto& student2) { return (student1.grade < student2.grade); })
-    //};
-    
-    //std::cout << best->name << " is the best student" << std::endl;
+    auto best{ std::max_element(arr.begin(),arr.end(), [](const auto& a, const auto& b) {return a.grade < b.grade; }) };
+
+    std::cout << best->name << std::endl;
 
     return 0;
 }

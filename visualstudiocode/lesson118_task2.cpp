@@ -9,7 +9,7 @@ struct Season
     double averageTemperature{};
 };
 
-int main()
+int mainlesson118_task2()
 {
     std::array<Season, 4> seasons{
       { { "Spring", 285.0 },
