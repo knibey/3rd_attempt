@@ -8,59 +8,64 @@
 #include <utility>
 #include <cstring>
 #include <vector>
+#include <math.h>
 
 int getRandomNumbers(int min, int max) {
     static const double fraction = 1.0 / (static_cast<double>(RAND_MAX) + 1.0);
     return static_cast<int>(rand() * fraction * (max - min + 1) + min);
 }
 
-std::vector<int> generateNumbers(int start, int count, int multiplier) {
-    std::vector<int> numbers(static_cast<std::vector<int>::size_type>(count));
+std::vector<int> getVector(int size, int randomnumber, int startnumber) {
+    std::vector<int> numbers{ 0 };
+    numbers.resize(size);
 
-    int i = start;
+    for (int i = 0; i < size; i++) {
+        numbers[i] = pow(startnumber, 2);
+        startnumber++;
+    }
 
-    for (auto& number : numbers) {
-        number = ((i * i) * multiplier);
-        i++;
+    for (int i = 0; i < size; i++) {
+        numbers[i] *= randomnumber;
     }
 
     return numbers;
-}
+};
 
-bool eraseUserGuess(std::vector<int>& numbers, int user_guess) {
-    if (auto found{ std::find(numbers.begin(), numbers.end(), user_guess) }; found == numbers.end()) {
-        return false;
-    }
-    else {
-        numbers.erase(found);
-        return true;
-    }
-}
-
-int findClosest(const std::vector<int>& numbers, int guess) {
-    return *std::min_element(numbers.begin(), numbers.end(), [=](int a, int b) {
-        return (std::abs(a - guess) < std::abs(b - guess));
-        });
-}
-
-int mainlesson119_task3() {
+int main() {
     srand(static_cast<unsigned int>(time(0)));
     rand();
 
-    std::cout << "Start where? ";
-    int start_where = getIntFromUser();
-    std::cout << "How many? ";
-    int how_many = getIntFromUser();
+    int randomnumber = getRandomNumbers(2, 4);
+    std::cout << "random number is: " << randomnumber << std::endl;
 
-    int randnumber = getRandomNumbers(2, 4);
+    std::cout << "Start where? " << std::endl;
+    int startnumber = getIntFromUser();
 
-    std::vector<int> numbers = generateNumbers(start_where, how_many, randnumber);
+    std::cout << "How many" << std::endl;
+    int count = getIntFromUser();
 
-    for (int i = 0; i < numbers.size(); i++) {
+    std::vector<int> numbers = getVector(count, randomnumber, startnumber);
+
+    for (int i = 0; i < count; i++) {
         std::cout << numbers[i] << " ";
     }
 
-    int user_guess = getIntFromUser();
+    std::cout << "\nI generated " << count << " square numbers. Do you know what each number is after multiplying it by " << randomnumber <<" ?" << std::endl;
+
+    int user_guess{ 0 };
+
+    while (numbers.size() != 0) {
+        user_guess = getIntFromUser();
+
+        auto found{ std::find(numbers.begin(), numbers.end(), user_guess) };
+
+        if (found != std::end(numbers)) {
+            std::cout << "Nice!" << std::endl;
+        }
+
+        numbers.erase(found);
+
+    }
 
     return 0;
 }
