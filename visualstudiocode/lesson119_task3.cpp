@@ -102,7 +102,7 @@ bool playGame(std::vector<int>& numbers) {
     }
 }
 
-int main() {
+int mainlesson119_task3() {
     srand(static_cast<unsigned int>(time(0)));
     rand();
 
