@@ -31,6 +31,19 @@ int binarySearch(int* array, int target, int min, int max) {
 }
 
 int binarySearchrec(int* array, int target, int min, int max) {
+    if (min > max) {
+        return -1;
+    }
+    
+    int mid = (max + min) / 2;
+
+    if (array[mid] > target) {
+        return binarySearchrec(array, target, min, mid - 1);
+    } else if (array[mid] < target) {
+        return binarySearchrec(array, target, mid + 1, max);
+    } else {
+        return mid;
+    }
 }
 
 int main()
@@ -40,7 +53,7 @@ int main()
     std::cout << "Enter a number: ";
     int x = getIntFromUser();
 
-    int index = binarySearch(array, x, 0, 14);
+    int index = binarySearchrec(array, x, 0, 14);
 
     if (array[index] == x)
         std::cout << "Good! Your value " << x << " is on position " << index << " in array!\n";
