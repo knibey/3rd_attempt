@@ -46,7 +46,7 @@ int binarySearchrec(int* array, int target, int min, int max) {
     }
 }
 
-int main()
+int maintopic7_test3()
 {
     int array[] = { 4, 7, 9, 13, 15, 19, 22, 24, 28, 33, 37, 41, 43, 47, 50 };
 
