@@ -47,7 +47,7 @@ public:
 
 };
 
-int main()
+int mainlesson122_task3()
 {
     Stack stack;
     stack.reset();
