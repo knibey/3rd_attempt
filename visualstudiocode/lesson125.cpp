@@ -32,7 +32,7 @@ public:
 };
 
 
-int main()
+int mainlesson125()
 {
     RGBA color(0, 135, 135);
     color.print();
