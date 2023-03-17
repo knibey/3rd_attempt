@@ -34,7 +34,7 @@ public:
 	}
 };
 
-int main()
+int mainlesson126()
 {
 	Thing defl;
 	defl.print();
