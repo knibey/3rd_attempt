@@ -16,7 +16,7 @@ public:
 	// Конструктор з параметром color (для radius надано значення за замовчуванням)
 	Thing(const std::string& color) : m_color(color)
 	{
-	}
+		}
 
 	// Конструктор з параметром radius (для color надано значення за замовчуванням)
 	Thing(double radius) : m_radius(radius)
