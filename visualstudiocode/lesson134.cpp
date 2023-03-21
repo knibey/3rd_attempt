@@ -50,7 +50,7 @@ void Point3D::moveByVector(const Vector3D& v)
 	m_z += v.m_z;
 }
 
-int main()
+int mainlesson134()
 {
 	Point3D p(3.0, 4.0, 5.0);
 	Vector3D v(3.0, 3.0, -2.0);
