@@ -32,7 +32,7 @@ double distanceTo(const Point& a, const Point& b) {
 	return sqrt((a.m_a - b.m_a) * (a.m_a - b.m_a) + (a.m_b - b.m_b) * (a.m_b - b.m_b));
 }
 
-int main()
+int maintopic8_test1()
 {
 	Point first;
 	Point second(2.0, 5.0);

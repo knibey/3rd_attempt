@@ -38,7 +38,7 @@ public:
 
 };
 
-int main()
+int maintopic8_test2()
 {
 	Welcome hello;
 	hello.print();
