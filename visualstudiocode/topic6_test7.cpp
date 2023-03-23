@@ -107,7 +107,7 @@ int getCardValue(const Card& card) {
     return 0;
 }
 
-char getPlayerChoice() {
+char getPlayerChoice1() {
     char choice;
     do {
         std::cout << "Do u wanna to hit or to stand? (H/S): ";
@@ -136,7 +136,7 @@ bool playBlackJack(const std::array<Card, 52> &deck) {
             return false;
         }
 
-        char choice = getPlayerChoice();
+        char choice = getPlayerChoice1();
         if (choice == 'S' || choice == 's') {
             break;
         }
