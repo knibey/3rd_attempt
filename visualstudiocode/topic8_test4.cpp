@@ -206,7 +206,7 @@ bool playBlackjack(Deck &deck)
 	return (playerTotal > dealerTotal);
 }
 
-int main()
+int maintopic8_test4()
 {
 	srand(static_cast<unsigned int>(time(0))); // використовуємо системний годинник в якості стартового значення
 	rand(); // користувачам Visual Studio: скидаємо перше згенероване (випадкове) число
