@@ -74,7 +74,7 @@ std::istream& operator>> (std::istream& in, Fraction1& fraction1) {
 }
 
 
-int main()
+int mainlesson141()
 {
  
     Fraction1 f1;
