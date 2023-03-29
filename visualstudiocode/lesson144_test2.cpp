@@ -50,7 +50,7 @@ std::ostream& operator<< (std::ostream& out, const Car& car) {
     return out;
 }
 
-int main()
+int mainlesson144_test2()
 {
     std::vector<Car> v;
     v.push_back(Car("Ford", "Mustang"));
