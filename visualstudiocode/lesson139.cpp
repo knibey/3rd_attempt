@@ -41,7 +41,7 @@ Fraction operator*(int value, const Fraction& f1) {
     return Fraction(f1.m_chiselnik * value, f1.m_znamennik);
 }
 
-int main()
+int mainlesson139()
 {
     Fraction f1(3, 4);
     f1.print();
@@ -60,4 +60,6 @@ int main()
 
     Fraction f6 = Fraction(1, 2) * Fraction(2, 3) * Fraction(3, 4);
     f6.print();
+
+    return 0;
 }
