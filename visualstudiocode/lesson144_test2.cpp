@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <map>
 
 class Car
 {
@@ -62,6 +63,7 @@ int mainlesson144_test2()
 
     for (auto& car : v)
         std::cout << car << '\n'; // потрібне перевантаження оператора << для класу Car
+    
 
     return 0;
 }
