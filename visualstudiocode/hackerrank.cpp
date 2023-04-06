@@ -68,7 +68,7 @@
 using namespace std;
 
 
-int main() {
+int mainhackerrank() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
 
     constexpr int size{4};
