@@ -67,7 +67,7 @@ void SomeTest()
     std::cout << (FixedPoint(-0.75) + FixedPoint(1.50) == FixedPoint(0.75)) << '\n'; // перше значення від'ємне, можливе переповнення
 }
 
-int main()
+int maintopic9_test4()
 {
     SomeTest();
 
