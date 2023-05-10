@@ -39,7 +39,7 @@ public:
     }
 };
 
-int main()
+int mainlesson156()
 {
     // Створюємо Працівників поза областю видимості класу Department
     Worker* w1 = new Worker("Anton");
