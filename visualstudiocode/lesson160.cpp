@@ -71,7 +71,7 @@ public:
 
 };
 
-int main()
+int mainlesson160()
 {
 	ArrayInt array{ 7, 6, 5, 4, 3, 2, 1 }; // список ініціалізації
 	for (int count = 0; count < array.getLength(); ++count)
