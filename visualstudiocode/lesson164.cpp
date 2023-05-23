@@ -44,7 +44,7 @@ public:
 	}
 };
 
-int main()
+int mainlesson164()
 {
 	const Apple a("Red delicious", "red", 7.3);
 	std::cout << a;
