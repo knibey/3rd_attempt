@@ -163,7 +163,7 @@ void fightMonster(Player& player) {
 
 }
 
-int main()
+int maintopic11_test3()
 {
 	srand(static_cast<unsigned int>(time(0))); // встановлюємо значення системного годинника в якості стартового значення
 	rand(); // скидаємо перший результат
